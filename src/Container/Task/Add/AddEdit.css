@@ -1,0 +1,35 @@
+/* .btn-secondary{
+    background: #389ced !important;
+    border-color: #ffffff !important;
+} */
+.row-red{
+    background: #a10d0d;
+}
+.row-green{
+    background: green;
+}
+.add-style{
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-secondary:hover{
+    /* background: #389ced !important; */
+    border-color: #ffffff !important;
+} 
+.btn btn-secondary:hover{
+    background: #a10d0d !important;
+}
+
+.red{
+    color: white;
+    background-color: rgb(221, 13, 79);
+    margin: 5px;
+}
+.red:hover{
+    color: white;
+    background-color: rgb(221, 13, 79);
+    margin: 5px;
+}
+.table-style{
+    width: 100%;
+}
