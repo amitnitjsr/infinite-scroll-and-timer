@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as action from '../Action';
-import { Row, Col, Button } from 'reactstrap';
 import './AddEdit.css';
 
 const AddTitleComponent = (props) => {
@@ -79,41 +78,41 @@ const AddTitleComponent = (props) => {
             <div style={{ padding: '4%' }}>
                 <div >
                     <form >
-                        <Row>
-                            <Col>
-                                <button onClick={(e) => startTimer(e)}>Add</button>
-                            </Col>
-                        </Row>
+                        <div>
+                            <div>
+                                <button className="add-btn-style" onClick={(e) => startTimer(e)}>Add</button>
+                            </div>
+                        </div>
                         {isAdd && (
-                            <Row>
-                                <Col>
+                            <div>
+                                <div>
                                     <textarea rows="4" cols="50"
                                         placeholder="Title"
                                         value={title}
                                         onChange={(e) => setTitle(e.target.value)}
                                     />
-                                </Col>
-                                <Col>
+                                </div>
+                                <div>
                                     {`Timer: ${counter}`}
-                                </Col>
-                            </Row>
+                                </div>
+                            </div>
                         )}
-                        <Row>
-                        </Row>
+                        <div>
+                        </div>
                         {isAdd && (
-                            <Row>
-                                <Col className="add-style">
-                                    <Button style={{ backgroundColor: '#6384f9', width: '18%' }}
+                            <div>
+                                <div className="add-style">
+                                    <button className="add-btn-style"
                                         onClick={(e) => saveHandler(e)}
-                                    >Add</Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                     <Button style={{ backgroundColor: '#6384f9' }}
+                                    >Save</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                     <button className="cancel-btn-style"
                                         onClick={(e) => cancelHandler(e)}
-                                    >Cancel</Button>
-                                </Col>
-                            </Row>
+                                    >Cancel</button>
+                                </div>
+                            </div>
                         )}
-                        <Row>
-                            <Col className="col-12">
+                        <div>
+                            <div className="col-12">
                                 <table className="table-style">
                                     <tr>
                                         <th>ID</th>
@@ -128,8 +127,8 @@ const AddTitleComponent = (props) => {
                                         )
                                     })}
                                 </table>
-                            </Col>
-                        </Row>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

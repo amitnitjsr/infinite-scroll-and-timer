@@ -35,3 +35,17 @@
 .table-style{
     width: 100%;
 }
+
+.add-btn-style{
+background-color: #6384f9;
+border: none;
+border-radius: 4px;
+color: white;
+}
+
+.cancel-btn-style{
+    background-color: rgb(221, 13, 79);
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
