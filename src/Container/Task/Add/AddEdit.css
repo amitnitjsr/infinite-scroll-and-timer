@@ -4,9 +4,11 @@
 } */
 .row-red{
     background: #a10d0d;
+    color: white;
 }
 .row-green{
     background: green;
+    color: white;
 }
 .add-style{
     display: flex;
