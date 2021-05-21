@@ -26,7 +26,7 @@ export default class index extends Component {
         Axios.get('https://api.instantwebtools.net/v1/passenger?page=' + this.state.page + '&size=' + this.state.per_page
         )
             .then((res) => {
-                this.setState({ list: res && res.data.data, apiError: false });
+                this.setState({ list: [...this.state.list, ...res.data.data], apiError: false });
             })
             .catch((error) => {
                 console.log('error', error)
@@ -38,7 +38,7 @@ export default class index extends Component {
     */
     fetchMoreData = () => {
         if (this.state.list.length < 50) {
-            this.setState({ per_page: this.state.per_page + 10 }, () => {
+            this.setState({ page: this.state.page + 1 }, () => {
                 this.getPhotoList();
             })
         }
@@ -56,7 +56,7 @@ export default class index extends Component {
                 </button>
                 </div>
                 <InfiniteScroll
-                    dataLength={this.state.per_page}
+                    dataLength={this.state.page}
                     next={() => this.fetchMoreData('pending')}
                     hasMore={this.state.hasMore}
                     endMessage={
